@@ -15,18 +15,14 @@ export const useAuth = function() {
     setUser();
     setInvalid(false);
     setPending(true);
-    const url = `https://jsonplaceholder.typicode.com/users?email=${email}`;
-    // Call auth provider login API
-    fetch(url)
-      .then((response) => response.json())
-      .then((res) => {
-        console.log("response", res);
-        if (!res.length) {
-          setInvalid(true);
-          return;
-        }
 
-        setUser(res[0]);
+    fetchUser(email)
+      .then(res => {
+        // no password checks, just accepts user
+        if (!res) {
+          setInvalid(true);
+        }
+        setUser(res);
       })
       .catch((error) => {
         console.log("error", error);
