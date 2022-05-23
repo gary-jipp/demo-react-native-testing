@@ -1,6 +1,6 @@
 # React Native Testing
 
-## Jest Test Renderer
+## Jest Testing
 
 - `react-test-renderer` included in project `init`
 - Create  'button-test.js'
