@@ -1,14 +1,13 @@
-
 import React from 'react';
-import {SafeAreaView, StatusBar, } from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import HomeStack from 'navigator/HomeStack';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <StatusBar />
-    </SafeAreaView>
+    <NavigationContainer>
+      <HomeStack />
+    </NavigationContainer>
   );
 };
-
 
 export default App;
