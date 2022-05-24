@@ -39,7 +39,7 @@ it('Pressing Slogan button changes text state', () => {
 });
 
 // Use built-in react test renderer
-it('Can find Slogan button & Text by TestID', () => {
+it('Can find Slogan Button & Text by TestID', () => {
   const instance = create(<Slogan text="Seize the Moment!" />).root;
   const button = instance.findByProps({testID: "button"}).props;
 
