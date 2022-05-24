@@ -7,6 +7,7 @@
 - Add a few test-renderer tests
 - Snapshots useful for unit testing of simple components
 - Not that useful for more complex components
+- can use `-u` to update the snapshot if the UI changes
 - Try to import `<App/>` and see what happens
 - We get a  nasty error message.
 -  `SyntaxError: Invalid or unexpected token`
