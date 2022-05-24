@@ -1,21 +1,24 @@
 # React Native Testing
 
-## React Testing Libraryz
+## React Testing Library
 
 https://testing-library.com/
 
-## Install Testing Library
-
+## Installing Testing Library
+Install packages
 ```
 npm install --save-dev @testing-library/react-native
 npm install --save-dev @testing-library/jest-native
 ```
 
-### Add to `package.json`
+Add to `package.json` - `jest` section
+```
+"setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"]
+```
 
-- "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"]
+## Add Slogan-tests to use testing-library
 
-### Refactor Slogan-tests to use testing-library
+
 
 https://www.npmjs.com/package/@testing-library/react-native
 

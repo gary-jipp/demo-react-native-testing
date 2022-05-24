@@ -10,7 +10,6 @@ it('Slogan matches UI snap shot', () => {
   const tree = create(<Slogan text="Seize the Moment!" />);
   const json = tree.toJSON();   // Docs recommend but doesn't seem to make a difference
   expect(tree).toMatchSnapshot(); // Creates snapshot on first run
-
 });
 
 // Use built-in react test renderer
