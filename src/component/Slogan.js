@@ -10,8 +10,8 @@ export default Slogan = (props) => {
 
   return (
     <View style={styles.container}>
-      <Button title='Slogan' onPress={onPress} />
-      <Text style={styles.text}>{text}</Text>
+      <Button testID="button" title='Slogan' onPress={onPress} />
+      <Text testID="slogan" style={styles.text}>{text}</Text>
     </View>
   );
 };
