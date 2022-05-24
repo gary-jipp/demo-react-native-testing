@@ -1,4 +1,5 @@
 const {useState, useEffect} = require("react");
+import fetchUser from "helper/fetchUser";
 
 export const useAuth = function() {
   const [pending, setPending] = useState(false);
