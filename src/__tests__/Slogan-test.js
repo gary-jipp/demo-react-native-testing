@@ -39,15 +39,14 @@ it('Pressing Slogan button changes text state', () => {
 });
 
 // Use built-in react test renderer
-it.only('Can find Slogan button & Text by TestID', () => {
+it('Can find Slogan button & Text by TestID', () => {
   const instance = create(<Slogan text="Seize the Moment!" />).root;
-  const button = instance.findByProps({TestID: "button"}).props;
+  const button = instance.findByProps({testID: "button"}).props;
 
   // Fire the onPress Event
   act(() => button.onPress());
 
   // Find the Text element.  findByText fails!  (more than one)
-  const text = instance.findByProps({TestID: "slogan"}).props;
-
+  const text = instance.findByProps({testID: "slogan"}).props;
   expect(text.children).toEqual("Seize the Moment!");
 });
