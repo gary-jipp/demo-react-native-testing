@@ -6,7 +6,8 @@ import Slogan from 'component/Slogan';
 import renderer from 'react-test-renderer';
 
 // Use built-in react test renderer
-it('Slogan button sets State', () => {
+it('Slogan matches UI snap shot', () => {
   const tree = renderer.create(<Slogan text="Seize the Moment!" />);
-
+  const json = tree.toJSON();
+  expect(tree).toMatchSnapshot();
 });
