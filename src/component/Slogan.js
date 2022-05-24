@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, View, Pressable, Button, } from 'react-native';
+import {StyleSheet, Text, View, Button, } from 'react-native';
 
 export default Slogan = (props) => {
   const [text, setText] = useState('');
