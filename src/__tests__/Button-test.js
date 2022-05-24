@@ -1,4 +1,3 @@
-import 'react-native';
 import React from 'react';
 import Button from 'component/Button';
 // import App from 'App';
