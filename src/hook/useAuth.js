@@ -1,4 +1,4 @@
-const {useState, useEffect} = require("react");
+const {useState} = require("react");
 import fetchUser from "helper/fetchUser";
 
 export const useAuth = function() {
