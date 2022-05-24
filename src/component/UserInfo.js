@@ -1,6 +1,6 @@
 import React from "react";
 import {StyleSheet, Text, View} from "react-native";
-import InfoView from "./InfoView";
+import Slogan from "./Slogan";
 
 const UserItem = ({label, value}) => (
   <View style={styles.userItem}>
@@ -21,7 +21,7 @@ export default (props) => {
       <UserItem label="Company" value={props.user.company.name} />
       <UserItem label="Phone" value={props.user.phone} />
       <UserItem label="Website" value={props.user.website} />
-      <InfoView />
+      <Slogan text={props.user.company.bs} />
     </View>
   );
 };

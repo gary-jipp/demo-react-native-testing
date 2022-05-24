@@ -11,7 +11,7 @@ export default ({navigation}) => {
 
   useEffect(() => {
     if (user) {
-      console.log("user=", user);
+      // console.log("user=", user);
       navigation.push("Profile", {user: user});
     }
   }, [user]);

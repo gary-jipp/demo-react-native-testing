@@ -1,17 +1,18 @@
 import React, {useState} from 'react';
 import {StyleSheet, Text, View, Pressable, Button, } from 'react-native';
-export default TestView = () => {
+
+export default Slogan = (props) => {
   const [text, setText] = useState('');
 
   const onPress = () => {
-    setText("Hi There!");
+    setText(props.text);
   };
 
   return (
     <View style={styles.container}>
-      <Button title='Press Me'/>
+      <Button title='Slogan' onPress={onPress} />
       <View>
-        <Text>{text}</Text>
+        <Text style={styles.text}>{text}</Text>
       </View>
     </View>
   );
@@ -21,12 +22,14 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
     paddingHorizontal: 0,
-    borderWidth: 1,
-    borderColor: 'red',
+    justifyContent: "center",
+    alignItems: "center",
+    // borderWidth: 1,
+    // borderColor: 'red',
   },
   text: {
     color: "#353031",
     fontWeight: "500",
-    fontSize: 24,
+    fontSize: 18,
   },
 });

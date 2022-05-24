@@ -8,7 +8,7 @@ export const useAuth = function() {
 
   const login = function(email, password) {
     if (!email || !password) {
-      console.log("Empty ...");
+      // console.log("Empty ...");
       setInvalid(true);
       return;
     }
