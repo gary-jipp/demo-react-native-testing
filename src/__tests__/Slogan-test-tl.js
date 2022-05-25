@@ -12,11 +12,12 @@ describe("Testing Library Tests for Slogan", () => {
     const result = render(<Slogan text="Seize the Moment!" />);
     // console.log(result);
     // console.log(result.toJSON());
+    // console.log(result.toJSON().children);
   });
 
 
-  it('Renders without crashing', () => {
-    const {container, getByText, getByRole, toJSON} = render(<Slogan text="Now or Never" />);
+  it('Shows slogan when button clicked', () => {
+    const {container, getByText, getAllByText, getByRole, toJSON} = render(<Slogan text="Now or Never" />);
 
     // const button = getByText("Slogan");
     const button = getByRole("button");
@@ -29,6 +30,12 @@ describe("Testing Library Tests for Slogan", () => {
 
     // Will assert if not found
     const view = getByText("Now or Never");
+    // console.log(view.props);
+
+    // Can use an inexact match, no case
+    const all = getAllByText('never', {exact: false});
+
+    expect(all.length).toEqual(1);
   });
 
 });
