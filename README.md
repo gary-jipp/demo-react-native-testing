@@ -5,18 +5,22 @@
 https://testing-library.com/
 
 ## Installing Testing Library
+
 Install packages
+
 ```
 npm install --save-dev @testing-library/react-native
 npm install --save-dev @testing-library/jest-native
 ```
 
 Add to `package.json` - `jest` section
+
 ```
 "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"]
 ```
 
 ## Add Slogan-tests to use testing-library
+
 - can add a describe wrapper (part of Jest)
 - render component without crashing
 - what does the `render` return?
@@ -26,10 +30,10 @@ Add to `package.json` - `jest` section
   - other stuff we don't use as much
 - as usual Jest is self asserting
 - can fire events eg: `press`
+- check out query priority
 
-- avoid using `getByTestId`.  `getByRole` is better
-- means we need to add a "role" to our button.  Should have one anyway!
-
+- avoid using `getByTestId`. `getByRole` is better
+- means we need to add a "role" to our button. Should have one anyway!
 
 https://www.npmjs.com/package/@testing-library/react-native
 
