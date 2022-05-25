@@ -27,6 +27,9 @@ Add to `package.json` - `jest` section
 - as usual Jest is self asserting
 - can fire events eg: `press`
 
+- avoid using `getByTestId`.  `getByRole` is better
+- means we need to add a "role" to our button.  Should have one anyway!
+
 
 https://www.npmjs.com/package/@testing-library/react-native
 
@@ -36,3 +39,5 @@ https://testing-library.com/docs/react-testing-library/cheatsheet/
 
 Accessibility Roles:
 https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
+
+https://reactnative.dev/docs/accessibility

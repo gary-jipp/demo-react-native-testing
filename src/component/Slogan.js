@@ -1,16 +1,19 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, View, Button, } from 'react-native';
+import {StyleSheet, Text, View, } from 'react-native';
+import Button from './Button';
 
 export default Slogan = (props) => {
   const [text, setText] = useState('');
+  const [disabled, setDisabled] = useState(false);
 
   const onPress = () => {
     setText(props.text);
+    setDisabled(true);
   };
 
   return (
     <View style={styles.container}>
-      <Button testID="button" title='Slogan' onPress={onPress} />
+      <Button testID="button" title='Slogan' onPress={onPress} disabled={disabled} />
       <Text testID="slogan" style={styles.text}>{text}</Text>
     </View>
   );

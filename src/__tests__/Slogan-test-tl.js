@@ -21,6 +21,7 @@ describe("Testing Library Tests for Slogan", () => {
 
     // const button = getByText("Slogan");
     const button = getByRole("button");
+    // console.log(button.props);
 
     // console.log(button.props);
     // console.log(toJSON().children);

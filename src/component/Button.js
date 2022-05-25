@@ -2,10 +2,15 @@ import React from 'react';
 import {StyleSheet, Text, View, Pressable, } from 'react-native';
 
 const Button = (props) => {
+  // console.log(`Button.${props.title}.disabled:`, props.disabled);
+
   return (
     <Pressable
+      testID="button"
+      accessibilityRole="button"
+      disabled={props.disabled}
       style={props.disabled || styles.pressable}
-      onPress={props.disabled ? undefined : props.onPress} >
+      onPress={props.onPress} >
       <View style={[styles.button, props.style, props.disabled && styles.disabled]}>
         <Text style={[styles.text, props.textStyle]}>{props.title}</Text>
       </View>
