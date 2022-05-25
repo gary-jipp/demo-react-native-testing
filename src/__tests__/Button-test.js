@@ -1,18 +1,33 @@
 import React from 'react';
-import Button from 'component/Button';
-// import App from 'App';
+import {render, cleanup, fireEvent} from "@testing-library/react-native";
+import Button from "component/Button";
 
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
+// unmounts the components after each test
+afterEach(cleanup);
 
-it('Button renders correctly with test-renderer', () => {
-  const tree = renderer.create(<Button />);
-  // console.log(tree.toJSON());
-});
+describe("Testing Library Tests for Button", () => {
 
-// Use built-in react test renderer
-it('Button renders and matches snapshop', () => {
-  const tree = renderer.create(<Button title="Press Me" />);
-  const json = tree.toJSON();   // Docs recommend but doesn't seem to make a difference
-  expect(tree).toMatchSnapshot(); // Creates snapshot on first run
+  it("When clicked, calls onPress if not disabled", () => {
+    const myMockFn = jest.fn();
+
+    const component = <Button title="Test" onPress={myMockFn} />;
+    const {container, getByRole, getByLabelText, getByTestId, toJSON} = render(component);
+
+    // const view = getByTestId("button");    //  not as good
+    const button = getByRole("button");       // Preferred option
+
+    fireEvent.press(button);
+    expect(myMockFn).toHaveBeenCalledTimes(1);
+  });
+
+  it("When clicked, Does not call onPress if disabled", () => {
+    const myMockFn = jest.fn();
+
+    const {container, getbyText, getByTestId, toJSON} = render(<Button disabled title="Test" onPress={myMockFn} />);
+    const view = getByTestId("button");
+
+    fireEvent.press(view);
+    expect(myMockFn).not.toHaveBeenCalled();
+  });
+
 });

@@ -1,51 +1,42 @@
 import React from 'react';
+import {render, cleanup, fireEvent} from "@testing-library/react-native";
 import Slogan from 'component/Slogan';
-// import App from 'App';
 
-// Note: test renderer must be required after react-native.
-import {create, act} from 'react-test-renderer';
+// unmounts the components after each test
+afterEach(cleanup);
 
-// Use built-in react test renderer
-it('Slogan matches UI snap shot', () => {
-  const tree = create(<Slogan text="Seize the Moment!" />);
-  const json = tree.toJSON();   // Docs recommend but doesn't seem to make a difference
-  expect(tree).toMatchSnapshot(); // Creates snapshot on first run
-});
+describe("Testing Library Tests for Slogan", () => {
 
-// Use built-in react test renderer
-it('Pressing Slogan button changes text state', () => {
-  const tree = create(<Slogan text="Seize the Moment!" />);
-  const instance = tree.root;
-  const buttonInstance = instance.findByProps({accessibilityRole: "button"});
-  const button = buttonInstance.props;
-  // console.log(button);
+  // Use testing library
+  it('Renders without crashing', () => {
+    const result = render(<Slogan text="Seize the Moment!" />);
+    // console.log(result);
+    // console.log(result.toJSON());
+    // console.log(result.toJSON().children);
+  });
 
-  // Find the Text element.  findByText fails!  (more than one)
-  const textInstance = instance.findAllByType("Text");
-  // console.log(text[0].props); // This is the Text inside the Button
-  // console.log(text[1].props); // This is the Text we want
 
-  const text = textInstance[1].props;
-  // console.log(text);
+  it('Shows slogan when button clicked', () => {
+    const {container, getByText, getAllByText, getByRole, toJSON} = render(<Slogan text="Now or Never" />);
 
-  // Fire the onPress Event
-  act(() => button.onPress());
+    // const button = getByText("Slogan");
+    const button = getByRole("button");
+    // console.log(button.props);
 
-  const newText = instance.findAllByType("Text")[1].props;
-  // console.log(newText);
+    // console.log(button.props);
+    // console.log(toJSON().children);
 
-  expect(newText.children).toEqual("Seize the Moment!");
-});
+    // Press the Button.
+    fireEvent.press(button);
 
-// Use built-in react test renderer
-it('Can find Slogan Button & Text by TestID', () => {
-  const instance = create(<Slogan text="Seize the Moment!" />).root;
-  const button = instance.findByProps({testID: "button"}).props;
+    // Will assert if not found
+    const view = getByText("Now or Never");
+    // console.log(view.props);
 
-  // Fire the onPress Event
-  act(() => button.onPress());
+    // Can use an inexact match, no case
+    const all = getAllByText('never', {exact: false});
 
-  // Find the Text element.  findByText fails!  (more than one)
-  const text = instance.findByProps({testID: "slogan"}).props;
-  expect(text.children).toEqual("Seize the Moment!");
+    expect(all.length).toEqual(1);
+  });
+
 });
