@@ -24,7 +24,7 @@ export default Login = (props) => {
       <Button testID="SignIn.Button" title="Login" disabled={props.pending}
         onPress={() => props.login(email, password)}
         style={styles.button} textStyle={styles.buttonText} />
-      {props./invalid && < ErrorText messages={["invalid login"]} />}
+      {props.invalid && < ErrorText messages={["invalid login"]} />}
     </View>
   );
 };
