@@ -19,6 +19,7 @@ describe("Testing Library Tests for Slogan", () => {
   it('Shows slogan when button clicked', () => {
     const {container, getByText, getAllByText, getByRole, toJSON} = render(<Slogan text="Now or Never" />);
 
+    // can find Button by Text or by Role
     // const button = getByText("Slogan");
     const button = getByRole("button");
     // console.log(button.props);

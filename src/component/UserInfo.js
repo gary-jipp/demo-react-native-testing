@@ -2,22 +2,25 @@ import React from "react";
 import {StyleSheet, Text, View} from "react-native";
 import Slogan from "./Slogan";
 
-const UserItem = ({label, value}) => (
-  <View style={styles.userItem}>
+const UserItem = ({label, value, accessibilityLabel}) => (
+  <View accessibilityLabel="User Item"
+    style={styles.userItem} >
     <View style={styles.itemLabel}>
-      <Text style={styles.text}>{label}:</Text>
+      <Text style={styles.text}>{label}</Text>
     </View>
     <View style={styles.itemValue}>
-      <Text style={styles.text}>{value}</Text>
+      <Text
+        accessibilityLabel={accessibilityLabel}
+        style={styles.text}>{value}</Text>
     </View>
   </View >
 );
 
-export default (props) => {
+export default UserInfo = (props) => {
   return (
-    <View style={styles.container}>
-      <UserItem label="Name" value={props.user.name} />
-      <UserItem label="City" value={props.user.address.city} />
+    <View style={styles.container} accessibilityLabel="Info" >
+      <UserItem accessibilityLabel="User Name" label="Name" value={props.user.name} />
+      <UserItem accessibilityLabel="City" label="City" value={props.user.address.city} />
       <UserItem label="Company" value={props.user.company.name} />
       <UserItem label="Phone" value={props.user.phone} />
       <UserItem label="Website" value={props.user.website} />

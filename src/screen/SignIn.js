@@ -3,6 +3,7 @@ import {StyleSheet, Text, SafeAreaView, StatusBar} from "react-native";
 import {Input, ErrorText} from "component/Form";
 import {useAuth} from "hook/useAuth";
 import Button from "component/Button";
+import Login from "component/Login";
 
 export default ({navigation}) => {
   const [email, setEmail] = useState("");
@@ -20,22 +21,7 @@ export default ({navigation}) => {
     <SafeAreaView style={styles.container}>
       <StatusBar />
       <Text style={styles.headerText}>Login</Text>
-      <Input
-        placeholder="email address"
-        onChangeText={setEmail}
-        testID="SignIn.usernameInput"
-      />
-      <Input
-        placeholder="password"
-        secureTextEntry
-        onChangeText={setPassword}
-        testID="SignIn.passwordInput"
-      />
-      <Button testID="SignIn.Button" title="Login" disabled={pending}
-        onPress={() => login(email, password)}
-        style={styles.button} textStyle={styles.buttonText} />
-      {invalid && < ErrorText messages={["invalid login"]} />}
-
+      <Login login={login} invalid={invalid} pending={pending} />
     </SafeAreaView>
   );
 };
@@ -58,17 +44,5 @@ const styles = StyleSheet.create({
     marginTop: 10,
     // borderWidth: 1,
     // borderColor: 'red',
-  },
-  button: {
-    alignItems: "center",
-    justifyContent: "center",
-    paddingVertical: 16,
-    borderRadius: 10,
-    marginTop: 10,
-  },
-  buttonText: {
-    color: "#fff",
-    fontSize: 20,
-    fontWeight: "600",
   },
 });
