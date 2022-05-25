@@ -26,13 +26,13 @@ it('Pressing Slogan button changes text state', () => {
   // console.log(text[1].props); // This is the Text we want
 
   const text = textInstance[1].props;
-  console.log(text);
+  // console.log(text);
 
   // Fire the onPress Event
   act(() => button.onPress());
 
   const newText = instance.findAllByType("Text")[1].props;
-  console.log(newText);
+  // console.log(newText);
 
   expect(newText.children).toEqual("Seize the Moment!");
 });
