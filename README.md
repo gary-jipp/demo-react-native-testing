@@ -2,7 +2,9 @@
 
 ## Integration Testing
 - multiple units working together
-
+- Testing `UserInfo.js`
+- `UserInfo-test.js`
+-
 
 
 
