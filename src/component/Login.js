@@ -1,4 +1,3 @@
-
 import React, {useState} from "react";
 import {StyleSheet, View} from "react-native";
 import {Input, ErrorText} from "component/Form";
@@ -34,7 +33,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "stretch",
-    paddingHorizontal: 40,
     // borderWidth: 1,
     // borderColor: 'blue',
   },
