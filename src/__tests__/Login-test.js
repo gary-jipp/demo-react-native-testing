@@ -14,7 +14,6 @@ describe("Testing Library Tests for Login", () => {
     // console.log(toJSON().children);
   });
 
-
   it('Should call login when clicked if email & password entered', () => {
     const login = jest.fn();
 

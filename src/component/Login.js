@@ -6,6 +6,15 @@ import Button from "component/Button";
 export default Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [empty, setEmpty] = useState(false);
+
+  const login = function(email, password) {
+    if (!email || !password) {
+      return setEmpty(true);
+    }
+    setEmpty(false);
+    props.login(email, password);
+  };
 
   return (
     <View style={styles.container}>
@@ -21,9 +30,10 @@ export default Login = (props) => {
         testID="SignIn.passwordInput"
       />
       <Button testID="SignIn.Button" title="Login" disabled={props.pending}
-        onPress={() => props.login(email, password)}
+        onPress={() => login(email, password)}
         style={styles.button} textStyle={styles.buttonText} />
-      {props.invalid && < ErrorText messages={["invalid login"]} />}
+      {props.invalid && <ErrorText messages={["invalid login"]} />}
+      {empty && < ErrorText messages={["email & password required"]} />}
     </View>
   );
 };
