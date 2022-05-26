@@ -1,14 +1,10 @@
 # React Native Testing
 
-## Integration Testing
+## Application Testing
 
-- multiple units working together
-- Testing `UserInfo.js`
-- `UserInfo-test.js`
-- Snapshots are useful for navigating and searching
-- Each UserItem is just a View object, Looks the same as any other
-- Need to add an `accessibilityLabel` to each item. Good practice
-- SnapShots can handle the static content. We are more concerner with state behavior
+- try to render the entire App
+- React Navigation generates some errors, need to fix
+
 
 https://callstack.github.io/react-native-testing-library/docs/getting-started
 
