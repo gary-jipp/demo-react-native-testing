@@ -18,6 +18,8 @@ npm install --save-dev jest-transform-stub
   }
 ```
 
+- Also need to include mock for animations
+
 https://callstack.github.io/react-native-testing-library/docs/getting-started
 
 https://www.npmjs.com/package/@testing-library/react-native
