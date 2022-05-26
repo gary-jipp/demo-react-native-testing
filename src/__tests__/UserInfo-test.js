@@ -15,7 +15,10 @@ describe("Testing Library Tests for UserInfo", () => {
 
     let info = getByLabelText("Info");
     // Exposes the underlying test-renderer methods
-    const button = info.findByType(Button);
+    // const button = info.findByType(Button);
+
+    // const button = getByRole("button");
+    const button = getByText("Slogan");
     // console.log(button.props);
 
     let queries = getQueriesForElement(info);
@@ -30,7 +33,6 @@ describe("Testing Library Tests for UserInfo", () => {
     expect(text).not.toBeNull();    // Really, a snapshot does this
 
     const sloganButton = getByRole("button");
-    console.log(sloganButton.props);
     fireEvent.press(sloganButton);    // Can't presss something that's not pressable
 
 
