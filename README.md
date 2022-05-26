@@ -19,6 +19,12 @@ npm install --save-dev jest-transform-stub
 ```
 
 - Also need to include mock for animations
+- Create jestSetup.js and mock `NativeAnimatedHelper`
+- or include in test files.
+
+```
+jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
+```
 
 https://callstack.github.io/react-native-testing-library/docs/getting-started
 
