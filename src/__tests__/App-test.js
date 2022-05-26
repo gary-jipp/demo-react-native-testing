@@ -10,11 +10,20 @@ afterEach(cleanup);
 describe("Testing Library Tests for App", () => {
 
   it("Renders without crashing", () => {
-    const { } = render(<App />);
+    const {toJSON} = render(<App />);
   });
 
   it("Renders without crashing", () => {
-    const { } = render(<App />);
+    const {container, getByText, getByPlaceholderText, getByRole, toJSON} = render(<App />);
+
+    const username = getByPlaceholderText("email address");
+    const password = getByPlaceholderText("password");
+    const button = getByRole("button");
+
+    fireEvent.changeText(username, 'James Holden');
+    fireEvent.changeText(password, 'Rocinate');
+
+
   });
 
 });
