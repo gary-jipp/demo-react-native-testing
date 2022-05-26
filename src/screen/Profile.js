@@ -4,7 +4,7 @@ import {SafeAreaView, StatusBar, StyleSheet, Text, View} from "react-native";
 
 export default (props) => {
   const user = props.route.params.user;
-  console.log("params=", props.route.params);
+  // console.log("params=", props.route.params);
 
   return (
     <SafeAreaView style={styles.container}>
