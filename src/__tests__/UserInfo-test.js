@@ -36,7 +36,7 @@ describe("Testing Library Tests for UserInfo", () => {
 
     // Self asserting
     const bs = getByText('harness real-time e-markets');
-    console.log(bs);
+    // console.log(bs);
 
     // findBy does not assert, always returns "something", even null
 
