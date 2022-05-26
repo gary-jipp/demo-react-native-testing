@@ -7,9 +7,13 @@ jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 // unmounts the components after each test
 afterEach(cleanup);
 
-describe("Testing Library Tests for Button", () => {
+describe("Testing Library Tests for App", () => {
 
-  it("When clicked, calls onPress if not disabled", () => {
+  it("Renders without crashing", () => {
+    const { } = render(<App />);
+  });
+
+  it("Renders without crashing", () => {
     const { } = render(<App />);
   });
 
