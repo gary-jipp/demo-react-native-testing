@@ -2,19 +2,7 @@ import React from "react";
 import {StyleSheet, Text, View} from "react-native";
 import Slogan from "./Slogan";
 
-const UserItem = ({label, value, accessibilityLabel}) => (
-  <View accessibilityLabel="User Item"
-    style={styles.userItem} >
-    <View style={styles.itemLabel}>
-      <Text style={styles.text}>{label}</Text>
-    </View>
-    <View style={styles.itemValue}>
-      <Text
-        accessibilityLabel={accessibilityLabel}
-        style={styles.text}>{value}</Text>
-    </View>
-  </View >
-);
+
 
 export default UserInfo = (props) => {
   return (
@@ -28,6 +16,20 @@ export default UserInfo = (props) => {
     </View>
   );
 };
+
+const UserItem = ({label, value, accessibilityLabel}) => (
+  <View accessibilityLabel="User Item"
+    style={styles.userItem} >
+    <View style={styles.itemLabel}>
+      <Text style={styles.text}>{label}</Text>
+    </View>
+    <View style={styles.itemValue}>
+      <Text
+        accessibilityLabel={accessibilityLabel}
+        style={styles.text}>{value}</Text>
+    </View>
+  </View >
+);
 
 const styles = StyleSheet.create({
   container: {
