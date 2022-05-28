@@ -27,6 +27,6 @@ jobs:
         cache: 'npm'
     - name: Copy to build
       run: |
-        git checkout origin/build
+        git checkout -b build
         git merge master
         git push origin build
