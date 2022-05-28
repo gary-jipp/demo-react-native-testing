@@ -27,7 +27,7 @@ jobs:
         cache: 'npm'
     - name: Copy to build
       run: |
-        git config --global pull.ff only
+        git config pull.rebase true
         git checkout -b build
         git merge master
         git push origin build
