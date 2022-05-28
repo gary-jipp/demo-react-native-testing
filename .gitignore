@@ -2,7 +2,6 @@
 #
 .DS_Store
 
-*.snap
 coverage
 # Xcode
 #

@@ -1,0 +1,330 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Library Tests for UserInfo Renders a User 1`] = `
+<View
+  accessibilityLabel="Info"
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "paddingHorizontal": 0,
+    }
+  }
+>
+  <View
+    accessibilityLabel="User Item"
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 10,
+        "marginTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginRight": 2,
+          "width": "35%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#353031",
+            "fontSize": 19,
+            "fontWeight": "500",
+          }
+        }
+      >
+        Name
+      </Text>
+    </View>
+    <View
+      style={Object {}}
+    >
+      <Text
+        accessibilityLabel="User Name"
+        style={
+          Object {
+            "color": "#353031",
+            "fontSize": 19,
+            "fontWeight": "500",
+          }
+        }
+      >
+        Leanne Graham
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="User Item"
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 10,
+        "marginTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginRight": 2,
+          "width": "35%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#353031",
+            "fontSize": 19,
+            "fontWeight": "500",
+          }
+        }
+      >
+        City
+      </Text>
+    </View>
+    <View
+      style={Object {}}
+    >
+      <Text
+        accessibilityLabel="City"
+        style={
+          Object {
+            "color": "#353031",
+            "fontSize": 19,
+            "fontWeight": "500",
+          }
+        }
+      >
+        Gwenborough
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="User Item"
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 10,
+        "marginTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginRight": 2,
+          "width": "35%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#353031",
+            "fontSize": 19,
+            "fontWeight": "500",
+          }
+        }
+      >
+        Company
+      </Text>
+    </View>
+    <View
+      style={Object {}}
+    >
+      <Text
+        style={
+          Object {
+            "color": "#353031",
+            "fontSize": 19,
+            "fontWeight": "500",
+          }
+        }
+      >
+        Romaguera-Crona
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="User Item"
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 10,
+        "marginTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginRight": 2,
+          "width": "35%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#353031",
+            "fontSize": 19,
+            "fontWeight": "500",
+          }
+        }
+      >
+        Phone
+      </Text>
+    </View>
+    <View
+      style={Object {}}
+    >
+      <Text
+        style={
+          Object {
+            "color": "#353031",
+            "fontSize": 19,
+            "fontWeight": "500",
+          }
+        }
+      >
+        1-770-736-8031 x56442
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="User Item"
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 10,
+        "marginTop": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginRight": 2,
+          "width": "35%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#353031",
+            "fontSize": 19,
+            "fontWeight": "500",
+          }
+        }
+      >
+        Website
+      </Text>
+    </View>
+    <View
+      style={Object {}}
+    >
+      <Text
+        style={
+          Object {
+            "color": "#353031",
+            "fontSize": 19,
+            "fontWeight": "500",
+          }
+        }
+      >
+        hildegard.org
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "justifyContent": "center",
+        "paddingHorizontal": 0,
+      }
+    }
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityState={
+        Object {
+          "disabled": false,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+      testID="button"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#2196F3",
+              "borderRadius": 5,
+              "elevation": 0,
+              "justifyContent": "center",
+              "paddingHorizontal": 20,
+              "paddingVertical": 12,
+            },
+            undefined,
+            false,
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#EEE",
+                "fontSize": 16,
+                "fontWeight": "bold",
+                "letterSpacing": 0.25,
+                "lineHeight": 21,
+              },
+              undefined,
+            ]
+          }
+        >
+          Slogan
+        </Text>
+      </View>
+    </View>
+    <Text
+      style={
+        Object {
+          "color": "#353031",
+          "fontSize": 18,
+          "fontWeight": "500",
+        }
+      }
+      testID="slogan"
+    >
+      
+    </Text>
+  </View>
+</View>
+`;
