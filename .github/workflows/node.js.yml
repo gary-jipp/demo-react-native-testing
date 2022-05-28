@@ -22,8 +22,8 @@ jobs:
     - uses: actions/checkout@v3
     - name: Copy to build
       run: |
-        git config pull.rebase true
         git checkout -b build
+        git fetch
         git pull origin build
         git merge master
         git push origin build
