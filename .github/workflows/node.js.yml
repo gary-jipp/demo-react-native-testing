@@ -29,5 +29,6 @@ jobs:
       run: |
         git config pull.rebase true
         git checkout -b build
+        git pull origin build
         git merge master
         git push origin build
