@@ -28,5 +28,6 @@ jobs:
     - name: Copy to build
       run: |
         git checkout -b build
+        git pull
         git merge master
         git push origin build
