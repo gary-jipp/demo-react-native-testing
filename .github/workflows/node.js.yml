@@ -28,9 +28,7 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-    - name: Save to build branch
-    run: |
-      git git checkout -b build
-      get merge master
-      git push origin build
-      
+    - run: git checkout -b build
+    - run: git merge master
+    - run: git push origin build
+
