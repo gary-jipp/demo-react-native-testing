@@ -25,10 +25,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
-    - run: git checkout -b build
-    - run: git merge master
-    - run: git push origin build
-
+#    - run: npm ci
+#    - run: npm run build --if-present
+#    - run: npm test
+    - run: |
+      git checkout -b build
+      git merge master
+      git push origin build
