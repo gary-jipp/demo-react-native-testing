@@ -26,6 +26,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
       run: |
-      git checkout -b build
-      git merge master
-      git push origin build
+        git checkout -b build
+        git merge master
+        git push origin build
