@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
-import {StyleSheet, Text, SafeAreaView, StatusBar} from "react-native";
+import {StyleSheet, Text, SafeAreaView, StatusBar, View} from "react-native";
+import Config from "react-native-config";
 import {Input, ErrorText} from "component/Form";
 import {useAuth} from "hook/useAuth";
 import Button from "component/Button";
@@ -9,6 +10,8 @@ export default ({navigation}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const {login, user, pending, invalid} = useAuth();
+
+  console.log("Config: ", Config);
 
   useEffect(() => {
     if (user) {
@@ -22,7 +25,8 @@ export default ({navigation}) => {
       <StatusBar />
       <Text style={styles.headerText}>Login</Text>
       <Login login={login} invalid={invalid} pending={pending} />
-    </SafeAreaView>
+      <View><Text>APIKEY={Config.DEMO }</Text></View>
+    </SafeAreaView >
   );
 };
 
